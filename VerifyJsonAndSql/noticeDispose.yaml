@@ -1,0 +1,12 @@
+data:
+  setupsql:
+    deleteNoticePlanTemplateType1: DELETE FROM qp_itfin2_data_232.notice_plan_template WHERE planId in(SELECT a.* FROM (SELECT planId FROM qp_itfin2_data_232.notice_plan_template npt
+                    LEFT JOIN qp_itfin2_data_232.notice_plan np ON npt.planId=np.id
+                    WHERE np.planType=1 or np.planType=2) a)
+    deleteNoticePlanType1: DELETE FROM qp_itfin2_data_232.notice_plan WHERE planType=1 or planType=2
+  noticePlanSave:
+    info: '新增方案，新增场景方案'
+    belongs: 'noticePlanSave'
+    verifySql: "SELECT planType,npt.templateId FROM qp_itfin2_data_232.notice_plan np
+                LEFT JOIN qp_itfin2_data_232.notice_plan_template npt ON np.id=npt.planId
+                ORDER BY np.addTime DESC LIMIT 0,3"

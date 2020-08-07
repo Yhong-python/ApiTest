@@ -1,0 +1,46 @@
+{
+  "belongMenu": "还款方式管理",
+  "data": [
+    {
+      "apiName": "getRepayMethodList",
+      "info": "查询还款方式列表",
+      "belongs": "getRepayMethodList",
+      "returnJsonData": {"code":200,"data":[{"id":10,"partnerId":308,"name":"接口自动化修改专用-修改","calculateType":1,"allFirstFormula":"","allMonthFormula":"","allLastFormula":"","principalFirstFormula":"","principalMonthFormula":"","principalLastFormula":"","interestFirstFormula":"","interestMonthFormula":"","interestLastFormula":"","allDayFormula":"#贷款金额#","principalDayFormula":"#贷款金额#","interestDayFormula":"#贷款金额#","status":0,"addTime":1591595359000,"updateTime":1591595359000},{"id":2,"partnerId":308,"name":"接口自动化查看专用-按月计息-等额本金","calculateType":2,"allFirstFormula":"#贷款金额#-Math.floor(#贷款金额#/#贷款期限#)*(#贷款期限#-1)+#贷款金额#*#利率#-[Math.floor(#贷款金额#/#贷款期限#)]*#利率#*(#贷款期限#-1)+(#首期还款日期#-#放款日期#)*#贷款金额#*#利率#/30","allMonthFormula":"Math.floor(#贷款金额#/#贷款期限#)+[Math.floor(#贷款金额#/#贷款期限#)]*#利率#","allLastFormula":"Math.floor(#贷款金额#/#贷款期限#)+[Math.floor(#贷款金额#/#贷款期限#)]*#利率#","principalFirstFormula":"#贷款金额#-Math.floor(#贷款金额#/#贷款期限#)*(#贷款期限#-1)","principalMonthFormula":"Math.floor(#贷款金额#/#贷款期限#)","principalLastFormula":"Math.floor(#贷款金额#/#贷款期限#)","interestFirstFormula":"#贷款金额#*#利率#-[Math.floor(#贷款金额#/#贷款期限#)]*#利率#*(#贷款期限#-1)+(#首期还款日期#-#放款日期#)*#贷款金额#*#利率#/30","interestMonthFormula":"[Math.floor(#贷款金额#/#贷款期限#)]*#利率#","interestLastFormula":"[Math.floor(#贷款金额#/#贷款期限#)]*#利率#","allDayFormula":"","principalDayFormula":"","interestDayFormula":"","status":1,"addTime":1591588705000,"updateTime":1591588710000},{"id":1,"partnerId":308,"name":"接口自动化查看专用-按日计息","calculateType":1,"allFirstFormula":"","allMonthFormula":"","allLastFormula":"","principalFirstFormula":"","principalMonthFormula":"","principalLastFormula":"","interestFirstFormula":"","interestMonthFormula":"","interestLastFormula":"","allDayFormula":"#贷款金额#*(1+#利率#)","principalDayFormula":"#贷款金额#","interestDayFormula":"#贷款金额#*#利率#","status":0,"addTime":1591588589000,"updateTime":1591588589000}]}
+    },
+    {
+      "apiName": "info",
+      "info": "查询还款方式详情-按日计息",
+      "belongs": "info",
+      "returnJsonData": {
+        "code": 200,
+        "data": {
+          "id": 1,
+          "partnerId": 308,
+          "name": "接口自动化查看专用-按日计息",
+          "calculateType": 1,
+          "allFirstFormula": "",
+          "allMonthFormula": "",
+          "allLastFormula": "",
+          "principalFirstFormula": "",
+          "principalMonthFormula": "",
+          "principalLastFormula": "",
+          "interestFirstFormula": "",
+          "interestMonthFormula": "",
+          "interestLastFormula": "",
+          "allDayFormula": "#贷款金额#*(1+#利率#)",
+          "principalDayFormula": "#贷款金额#",
+          "interestDayFormula": "#贷款金额#*#利率#",
+          "status": 0,
+          "addTime": 1591588589000,
+          "updateTime": 1591588589000
+        }
+      }
+    },
+    {
+      "apiName": "info2",
+      "info": "查询还款方式详情-按月计息",
+      "belongs": "info2",
+      "returnJsonData": {"code":200,"data":{"id":2,"partnerId":308,"name":"接口自动化查看专用-按月计息-等额本金","calculateType":2,"allFirstFormula":"#贷款金额#-Math.floor(#贷款金额#/#贷款期限#)*(#贷款期限#-1)+#贷款金额#*#利率#-[Math.floor(#贷款金额#/#贷款期限#)]*#利率#*(#贷款期限#-1)+(#首期还款日期#-#放款日期#)*#贷款金额#*#利率#/30","allMonthFormula":"Math.floor(#贷款金额#/#贷款期限#)+[Math.floor(#贷款金额#/#贷款期限#)]*#利率#","allLastFormula":"Math.floor(#贷款金额#/#贷款期限#)+[Math.floor(#贷款金额#/#贷款期限#)]*#利率#","principalFirstFormula":"#贷款金额#-Math.floor(#贷款金额#/#贷款期限#)*(#贷款期限#-1)","principalMonthFormula":"Math.floor(#贷款金额#/#贷款期限#)","principalLastFormula":"Math.floor(#贷款金额#/#贷款期限#)","interestFirstFormula":"#贷款金额#*#利率#-[Math.floor(#贷款金额#/#贷款期限#)]*#利率#*(#贷款期限#-1)+(#首期还款日期#-#放款日期#)*#贷款金额#*#利率#/30","interestMonthFormula":"[Math.floor(#贷款金额#/#贷款期限#)]*#利率#","interestLastFormula":"[Math.floor(#贷款金额#/#贷款期限#)]*#利率#","allDayFormula":"","principalDayFormula":"","interestDayFormula":"","status":1,"addTime":1591588705000,"updateTime":1591588710000}}
+    }
+  ]
+}

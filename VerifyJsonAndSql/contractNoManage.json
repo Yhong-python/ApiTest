@@ -1,0 +1,664 @@
+{
+  "belongMenu": "合同编号管理",
+  "data": [
+    {
+      "apiName": "lookImportPage",
+      "info": "查看导入的合同编号列表",
+      "belongs": "lookImportPage",
+      "returnJsonData": {
+        "code": 200,
+        "page": {
+          "totalCount": 5,
+          "pageSize": 10,
+          "totalPage": 1,
+          "currentPage": 1,
+          "list": [
+            {
+              "id": 11,
+              "ruleId": 16,
+              "contNum": "apiauto0001",
+              "productType": 89,
+              "bankId": 336,
+              "status": 1,
+              "orderId": null,
+              "addTime": 1591158528000,
+              "updateTime": 1591158528000,
+              "typeName": "杨洪业务",
+              "bankName": "杨洪银行"
+            },
+            {
+              "id": 12,
+              "ruleId": 16,
+              "contNum": "apiauto0002",
+              "productType": 89,
+              "bankId": 336,
+              "status": 1,
+              "orderId": null,
+              "addTime": 1591158528000,
+              "updateTime": 1591158528000,
+              "typeName": "杨洪业务",
+              "bankName": "杨洪银行"
+            },
+            {
+              "id": 13,
+              "ruleId": 16,
+              "contNum": "apiauto0003",
+              "productType": 89,
+              "bankId": 336,
+              "status": 1,
+              "orderId": null,
+              "addTime": 1591158528000,
+              "updateTime": 1591158528000,
+              "typeName": "杨洪业务",
+              "bankName": "杨洪银行"
+            },
+            {
+              "id": 14,
+              "ruleId": 16,
+              "contNum": "apiauto0004",
+              "productType": 89,
+              "bankId": 336,
+              "status": 1,
+              "orderId": null,
+              "addTime": 1591158528000,
+              "updateTime": 1591158528000,
+              "typeName": "杨洪业务",
+              "bankName": "杨洪银行"
+            },
+            {
+              "id": 15,
+              "ruleId": 16,
+              "contNum": "apiauto0005",
+              "productType": 89,
+              "bankId": 336,
+              "status": 1,
+              "orderId": null,
+              "addTime": 1591158528000,
+              "updateTime": 1591158528000,
+              "typeName": "杨洪业务",
+              "bankName": "杨洪银行"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "apiName": "contNumRuleInfo",
+      "info": "查询合同编号详情",
+      "belongs": "contNumRuleInfo",
+      "returnJsonData": {
+        "code": 200,
+        "data": {
+          "contNumRule": {
+            "id": 16,
+            "ruleName": "接口自动化查看接口专用",
+            "description": "规则概述",
+            "type": 2,
+            "customRule": null,
+            "isCustomContract": 1,
+            "isSpecialContract": 1,
+            "isAddContract": 1,
+            "isInvalidContract": 1,
+            "status": 0,
+            "addTime": 1591158501000,
+            "updateTime": 1591158501000
+          },
+          "cumRulePlaceholder": [],
+          "contNumRuleImport": [],
+          "contNumRulePartner": [
+            {
+              "id": 62,
+              "ruleId": 16,
+              "partnerId": 134
+            },
+            {
+              "id": 63,
+              "ruleId": 16,
+              "partnerId": 289
+            },
+            {
+              "id": 64,
+              "ruleId": 16,
+              "partnerId": 307
+            },
+            {
+              "id": 65,
+              "ruleId": 16,
+              "partnerId": 308
+            },
+            {
+              "id": 66,
+              "ruleId": 16,
+              "partnerId": 547
+            }
+          ],
+          "companyTree": [
+            {
+              "id": 134,
+              "parentId": -1,
+              "text": "发布会试用机构",
+              "type": 1,
+              "parentSeriesId": "$",
+              "basePartnerId": 134,
+              "selected": true,
+              "opened": true,
+              "icon": "tree-company",
+              "statusFlag": 1,
+              "children": [
+                {
+                  "id": 289,
+                  "parentId": 134,
+                  "text": "测试机构A",
+                  "type": 2,
+                  "parentSeriesId": "$134$",
+                  "basePartnerId": 134,
+                  "selected": true,
+                  "opened": true,
+                  "icon": "tree-company",
+                  "statusFlag": 1,
+                  "children": null
+                },
+                {
+                  "id": 307,
+                  "parentId": 134,
+                  "text": "测试机构B",
+                  "type": 2,
+                  "parentSeriesId": "$134$",
+                  "basePartnerId": 134,
+                  "selected": true,
+                  "opened": true,
+                  "icon": "tree-company",
+                  "statusFlag": 1,
+                  "children": null
+                },
+                {
+                  "id": 308,
+                  "parentId": 134,
+                  "text": "测试机构C",
+                  "type": 2,
+                  "parentSeriesId": "$134$",
+                  "basePartnerId": 134,
+                  "selected": true,
+                  "opened": true,
+                  "icon": "tree-company",
+                  "statusFlag": 1,
+                  "children": null
+                },
+                {
+                  "id": 547,
+                  "parentId": 134,
+                  "text": "测试机构D",
+                  "type": 2,
+                  "parentSeriesId": "$134$",
+                  "basePartnerId": 134,
+                  "selected": true,
+                  "opened": true,
+                  "icon": "tree-company",
+                  "statusFlag": 1,
+                  "children": null
+                }
+              ]
+            }
+          ],
+          "bankAndTypeList": [
+            {
+              "id": 89,
+              "name": "杨洪业务"
+            },
+            {
+              "id": 336,
+              "name": "杨洪银行"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "apiName": "importRuleDate",
+      "info": "导入合同编号",
+      "belongs": "importRuleDate",
+      "returnJsonData": {
+        "code": 200,
+        "data": {
+          "duplicateDataCount": 0,
+          "existingDataCount": 0,
+          "importDate": [
+            {
+              "id": null,
+              "ruleId": 19,
+              "contNum": "10086",
+              "productType": 56,
+              "bankId": 171,
+              "status": 1,
+              "orderId": null,
+              "addTime": null,
+              "updateTime": null,
+              "typeName": "汽车消费分期",
+              "bankName": "中国工商银行杭州西兴支行"
+            }
+          ],
+          "importCount": 1,
+          "duplicateData": [],
+          "templateCode": 2,
+          "existingData": []
+        }
+      }
+    },
+    {
+      "apiName": "getCompanyTreeByBasePartnerId",
+      "info": "设置-公司及部门，查询左侧机构树",
+      "belongs": "getCompanyTreeByBasePartnerId",
+      "returnJsonData": {
+        "code": 200,
+        "data": [
+          {
+            "id": 134,
+            "parentId": -1,
+            "text": "发布会试用机构",
+            "type": 1,
+            "parentSeriesId": "$",
+            "basePartnerId": 134,
+            "selected": false,
+            "opened": true,
+            "icon": "tree-company",
+            "statusFlag": 1,
+            "children": [
+              {
+                "id": 289,
+                "parentId": 134,
+                "text": "测试机构A",
+                "type": 2,
+                "parentSeriesId": "$134$",
+                "basePartnerId": 134,
+                "selected": false,
+                "opened": true,
+                "icon": "tree-company",
+                "statusFlag": 1,
+                "children": null
+              },
+              {
+                "id": 307,
+                "parentId": 134,
+                "text": "测试机构B",
+                "type": 2,
+                "parentSeriesId": "$134$",
+                "basePartnerId": 134,
+                "selected": false,
+                "opened": true,
+                "icon": "tree-company",
+                "statusFlag": 1,
+                "children": null
+              },
+              {
+                "id": 308,
+                "parentId": 134,
+                "text": "测试机构C",
+                "type": 2,
+                "parentSeriesId": "$134$",
+                "basePartnerId": 134,
+                "selected": false,
+                "opened": true,
+                "icon": "tree-company",
+                "statusFlag": 1,
+                "children": null
+              },
+              {
+                "id": 547,
+                "parentId": 134,
+                "text": "测试机构D",
+                "type": 2,
+                "parentSeriesId": "$134$",
+                "basePartnerId": 134,
+                "selected": false,
+                "opened": true,
+                "icon": "tree-company",
+                "statusFlag": 1,
+                "children": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apiName": "departmentPage",
+      "info": "设置-公司及部门，获取机构部门详情",
+      "belongs": "departmentPage",
+      "returnJsonData": {
+        "code": 200,
+        "partner": {
+          "id": 134,
+          "name": "发布会试用机构",
+          "parentId": -1,
+          "parentSeriesId": "$",
+          "sort": null,
+          "type": 1,
+          "contactPerson": "周总",
+          "contactTel": "11111111111",
+          "idNo": "111111111111111111",
+          "areaCode": "12",
+          "areaName": "天津市",
+          "address": "大范甘迪",
+          "contractDate": 1633017600000,
+          "idCardFrontPic": null,
+          "idCardBackPic": null,
+          "statusFlag": 1,
+          "children": null,
+          "datasourceId": null,
+          "basePartnerId": 134,
+          "clientRight": 2,
+          "depCode": null
+        },
+        "page": [
+          {
+            "id": 288,
+            "name": "测试部门1",
+            "parentId": null,
+            "parentSeriesId": null,
+            "sort": null,
+            "type": 3,
+            "contactPerson": null,
+            "contactTel": null,
+            "idNo": null,
+            "areaCode": null,
+            "areaName": null,
+            "address": null,
+            "contractDate": null,
+            "idCardFrontPic": null,
+            "idCardBackPic": null,
+            "statusFlag": null,
+            "children": null,
+            "datasourceId": null,
+            "basePartnerId": null,
+            "clientRight": null,
+            "depCode": null
+          },
+          {
+            "id": 328,
+            "name": "2333",
+            "parentId": null,
+            "parentSeriesId": null,
+            "sort": null,
+            "type": 3,
+            "contactPerson": null,
+            "contactTel": null,
+            "idNo": null,
+            "areaCode": null,
+            "areaName": null,
+            "address": null,
+            "contractDate": null,
+            "idCardFrontPic": null,
+            "idCardBackPic": null,
+            "statusFlag": null,
+            "children": null,
+            "datasourceId": null,
+            "basePartnerId": null,
+            "clientRight": null,
+            "depCode": null
+          },
+          {
+            "id": 357,
+            "name": " 周璐瑶测试",
+            "parentId": null,
+            "parentSeriesId": null,
+            "sort": null,
+            "type": 3,
+            "contactPerson": null,
+            "contactTel": null,
+            "idNo": null,
+            "areaCode": null,
+            "areaName": null,
+            "address": null,
+            "contractDate": null,
+            "idCardFrontPic": null,
+            "idCardBackPic": null,
+            "statusFlag": null,
+            "children": null,
+            "datasourceId": null,
+            "basePartnerId": null,
+            "clientRight": null,
+            "depCode": null
+          },
+          {
+            "id": 401,
+            "name": "删除部门",
+            "parentId": null,
+            "parentSeriesId": null,
+            "sort": null,
+            "type": 3,
+            "contactPerson": null,
+            "contactTel": null,
+            "idNo": null,
+            "areaCode": null,
+            "areaName": null,
+            "address": null,
+            "contractDate": null,
+            "idCardFrontPic": null,
+            "idCardBackPic": null,
+            "statusFlag": null,
+            "children": null,
+            "datasourceId": null,
+            "basePartnerId": null,
+            "clientRight": null,
+            "depCode": null
+          }
+        ]
+      }
+    },
+    {
+      "apiName": "getAreaPage",
+      "info": "设置-省市，查询省市代号设置列表",
+      "belongs": "getAreaPage",
+      "returnJsonData": {
+        "code": 200,
+        "page": {
+          "totalCount": 368,
+          "pageSize": 10,
+          "totalPage": 37,
+          "currentPage": 1,
+          "list": [
+            {
+              "id": 2945,
+              "province": "北京市",
+              "city": "",
+              "code": "京",
+              "addTime": 1591254190000,
+              "updateTime": 1591254190000
+            },
+            {
+              "id": 2946,
+              "province": "天津市",
+              "city": "",
+              "code": "津",
+              "addTime": 1591254190000,
+              "updateTime": 1591254190000
+            },
+            {
+              "id": 2947,
+              "province": "河北省",
+              "city": "",
+              "code": "冀",
+              "addTime": 1591254190000,
+              "updateTime": 1591254190000
+            },
+            {
+              "id": 2948,
+              "province": "河北省",
+              "city": "保定市",
+              "code": "BD",
+              "addTime": 1591254190000,
+              "updateTime": 1591254190000
+            },
+            {
+              "id": 2949,
+              "province": "河北省",
+              "city": "沧州市",
+              "code": "CZ",
+              "addTime": 1591254190000,
+              "updateTime": 1591254190000
+            },
+            {
+              "id": 2950,
+              "province": "河北省",
+              "city": "承德市",
+              "code": "CD",
+              "addTime": 1591254190000,
+              "updateTime": 1591254190000
+            },
+            {
+              "id": 2951,
+              "province": "河北省",
+              "city": "邯郸市",
+              "code": "HD",
+              "addTime": 1591254190000,
+              "updateTime": 1591254190000
+            },
+            {
+              "id": 2952,
+              "province": "河北省",
+              "city": "衡水市",
+              "code": "HS",
+              "addTime": 1591254190000,
+              "updateTime": 1591254190000
+            },
+            {
+              "id": 2953,
+              "province": "河北省",
+              "city": "廊坊市",
+              "code": "LF",
+              "addTime": 1591254190000,
+              "updateTime": 1591254190000
+            },
+            {
+              "id": 2954,
+              "province": "河北省",
+              "city": "秦皇岛市",
+              "code": "QKD",
+              "addTime": 1591254190000,
+              "updateTime": 1591254190000
+            }
+          ]
+        }
+      }
+    },
+    {
+      "apiName": "getBank",
+      "info": "设置-合作银行，查询合作银行代号设置列表",
+      "belongs": "getBank",
+      "returnJsonData": {
+        "code": 200,
+        "bankList": [
+          {
+            "id": 1,
+            "bankId": 243,
+            "code": null,
+            "addTime": null,
+            "updateTime": null,
+            "bankName": "杭州万欧"
+          },
+          {
+            "id": 2,
+            "bankId": 233,
+            "code": null,
+            "addTime": null,
+            "updateTime": null,
+            "bankName": "橘子银行"
+          }
+        ]
+      }
+    },
+    {
+      "apiName": "partnerSpPage",
+      "info": "设置-合作银行，查询合作银行代号设置列表",
+      "belongs": "partnerSpPage",
+      "returnJsonData": {
+        "code": 200,
+        "page": [
+          {
+            "spId": 1,
+            "partnerId": 232,
+            "spCode": null,
+            "spName": "接口自动化测试车商",
+            "name": "自动化测试"
+          }
+        ]
+      }
+    },
+    {
+      "apiName": "getProductType",
+      "info": "设置-业务类型，查询业务类型代号设置列表",
+      "belongs": "getProductType",
+      "returnJsonData": {
+        "code": 200,
+        "typeList": [
+          {
+            "id": 2,
+            "productType": 72,
+            "code": null,
+            "addTime": null,
+            "updateTime": null,
+            "name": "WEB自动化"
+          }
+        ]
+      }
+    },
+    {
+      "apiName": "getProductFrom",
+      "info": "设置-业务类型，查询业务类型代号设置列表",
+      "belongs": "getProductFrom",
+      "returnJsonData": {
+        "code": 200,
+        "list": [
+          {
+            "id": null,
+            "productFrom": 1,
+            "code": null,
+            "addTime": null,
+            "updateTime": null,
+            "name": "直客"
+          },
+          {
+            "id": null,
+            "productFrom": 2,
+            "code": null,
+            "addTime": null,
+            "updateTime": null,
+            "name": "间客"
+          },
+          {
+            "id": null,
+            "productFrom": 4,
+            "code": null,
+            "addTime": null,
+            "updateTime": null,
+            "name": "车商进件"
+          },
+          {
+            "id": null,
+            "productFrom": 8,
+            "code": null,
+            "addTime": null,
+            "updateTime": null,
+            "name": "银行转件"
+          },
+          {
+            "id": null,
+            "productFrom": 16,
+            "code": null,
+            "addTime": null,
+            "updateTime": null,
+            "name": "自营业务"
+          },
+          {
+            "id": null,
+            "productFrom": 32,
+            "code": null,
+            "addTime": null,
+            "updateTime": null,
+            "name": "第三方进件"
+          }
+        ]
+      }
+    }
+  ]
+}

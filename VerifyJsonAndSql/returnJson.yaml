@@ -1,0 +1,80 @@
+menu1:
+  api1:
+    $schema: http://json-schema.org/draft-04/schema#
+    title: TestInfo
+    description: some information about test
+    type: object
+    properties:
+      code:
+        type: integer
+      page:
+        type: object
+        properties:
+          currentPage:
+            type: integer
+          list:
+            type: array
+            items:
+              type: object
+              properties:
+                address:
+                  type:
+                  - string
+                  - 'null'
+                areaCode:
+                  type:
+                  - string
+                  - 'null'
+                areaName:
+                  type:
+                  - string
+                  - 'null'
+                basePartnerId:
+                  type: integer
+                children:
+                  type: 'null'
+                clientRight:
+                  type: integer
+                contactPerson:
+                  type: string
+                contractDate:
+                  type: 'null'
+                datasourceId:
+                  type: 'null'
+                depCode:
+                  type:
+                  - string
+                  - 'null'
+                id:
+                  type: integer
+                idCardBackPic:
+                  type:
+                  - string
+                  - 'null'
+                idCardFrontPic:
+                  type:
+                  - string
+                  - 'null'
+                idNo:
+                  type: string
+                name:
+                  type: string
+                parentId:
+                  type: integer
+                parentSeriesId:
+                  type: string
+                sort:
+                  type: 'null'
+                statusFlag:
+                  type: integer
+                type:
+                  type: integer
+          pageSize:
+            type: integer
+          totalCount:
+            type: integer
+          totalPage:
+            type: integer
+    required:
+    - code
+    - page

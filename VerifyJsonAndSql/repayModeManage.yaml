@@ -1,0 +1,14 @@
+data:
+  setupsql:
+    delteAlreadyExistSql: "DELETE FROM qp_itfin2_data_134.repay_mode WHERE `name`='自动化新增-按日计息'"
+    resetStartSQL: "UPDATE qp_itfin2_data_134.repay_mode SET `name`='接口自动化修改专用-修改',allDayFormula='#贷款金额#',principalDayFormula='#贷款金额#',interestDayFormula='#贷款金额#',`status`=0,updateTime=(SELECT a.addTime FROM (SELECT addTime FROM qp_itfin2_data_134.repay_mode WHERE id=10) a) WHERE id=10"
+    resetStatus:
+  inOrUpRepayMode:
+    info: '新建还款方式'
+    belongs: 'inOrUpRepayMode'
+    verifySql: "SELECT * FROM qp_itfin2_data_134.repay_mode WHERE `name`='自动化新增-按日计息'"
+    updateSql: "SELECT * FROM qp_itfin2_data_134.repay_mode WHERE id=10"
+  enableOrProhibit:
+    info: '启用/禁用还款方式'
+    belongs: 'enableOrProhibit'
+    verifySql: "SELECT `status` FROM qp_itfin2_data_134.repay_mode  WHERE id=10"

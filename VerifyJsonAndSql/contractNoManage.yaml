@@ -1,0 +1,65 @@
+data:
+  setupsql:
+    resetAreaSql: "UPDATE qp_itfin2_data_134.cont_num_config_area SET `code`='京',updateTime=(SELECT a.addTime FROM (SELECT addTime FROM qp_itfin2_data_134.cont_num_config_area WHERE province='北京市') a) WHERE province='北京市'"
+    resetDeptmentSql: "UPDATE pms_department SET depCode=NULL WHERE id IN(134,288,328,357,401)"
+    resetBankSql: "UPDATE qp_itfin2_data_232.cont_num_config_bank SET `code`=NULL WHERE bankId=243"
+    resetSpSql: "UPDATE qp_itfin2_data_232.cpt_partner_sp SET spCode=NULL WHERE spId=1"
+    resrtProductTypeSql: "UPDATE qp_itfin2_data_232.cont_num_config_product_type SET code=NULL WHERE productType=72"
+    resrtProductFromSql: "UPDATE qp_itfin2_data_232.cont_num_config_product_from SET `code`=NULL WHERE productFrom=1"
+  contNumRulePage:
+    info: '合同编号规则列表'
+    belongs: 'contNumRulePage'
+    verifySql: 'SELECT cnr.id,ruleName,`status`,COUNT( ruleId ) sum FROM qp_itfin2_data_{}.cont_num_rule cnr
+                 LEFT JOIN qp_itfin2_data_{}.cont_num_rule_partner cnrp ON cnr.id = cnrp.ruleId GROUP BY cnr.id
+                 ORDER BY id DESC LIMIT 0,{}'
+  savecontNumRule:
+    info: '新建合同编号规则'
+    belongs: 'savecontNumRule'
+    verifySql: 'SELECT id,ruleName,type FROM qp_itfin2_data_{}.cont_num_rule ORDER BY id DESC LIMIT 0,1'
+    deleteSql: "DELETE FROM qp_itfin2_data_134.cont_num_rule WHERE ruleName='自动化新增'"
+  insertOrUpdateContNum:
+    info: '修改合同编号详情'
+    belongs: 'insertOrUpdateContNum'
+    sql1info: '查询合同编号名称，描述，自定义规则，作废合同的适用状态，勾选的机构id'
+    verifySql1: 'SELECT ruleName,description,customRule,isInvalidContract,partnerId FROM qp_itfin2_data_134.cont_num_rule cnr
+                LEFT JOIN qp_itfin2_data_134.cont_num_rule_partner cnrp ON cnr.id = cnrp.ruleId
+                WHERE cnr.id=15'
+    verifySql2: "SELECT serialTypeLength FROM qp_itfin2_data_134.cont_num_rule_placeholder WHERE id=10"
+    resetSql:
+      selectSql: 'SELECT id FROM qp_itfin2_data_134.cont_num_rule_placeholder WHERE id=12'
+      insertSql: "INSERT INTO `qp_itfin2_data_134`.`cont_num_rule_placeholder`(`id`, `ruleId`, `name`, `dataFrom`, `companyType`, `areaType1`, `areaType2`, `timeType1`, `timeType2`, `serialType`, `serialTypeDate`, `serialTypeMaxNum`, `serialTypeCurNum`, `serialTypeLength`, `addTime`, `updateTime`, `sort`) VALUES (12, 15, '#要删除的#', 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-06-03 13:37:29', '2020-06-03 13:37:29', 1)"
+      updateSql1: "UPDATE qp_itfin2_data_134.cont_num_rule SET ruleName='修改专用-勿动',description='我是规则概述',customRule='#流水号##要删除的#',isInvalidContract=0 WHERE id =15"
+      updateSql2: "UPDATE qp_itfin2_data_134.cont_num_rule_placeholder SET serialTypeLength=4 WHERE id=10"
+      deleteSql: 'DELETE FROM qp_itfin2_data_134.cont_num_rule_partner WHERE ruleId = 15 AND partnerId=547'
+  enableOrProhibit:
+    info: '查询合同编号规则当前状态'
+    belongs: 'enableOrProhibit'
+    verifySql: "SELECT `status` FROM qp_itfin2_data_134.cont_num_rule WHERE id=17"
+  upImportstatus:
+    info: '查询导入的合同编号规则当前状态'
+    belongs: 'upImportstatus'
+    verifySql: "SELECT status FROM qp_itfin2_data_134.cont_num_rule_import WHERE id=16"
+  saveDepartmentCode:
+    info: '设置-公司及部门，保存机构/部门代号'
+    belongs: 'saveDepartmentCode'
+    verifySql: "SELECT id,depCode FROM pms_department WHERE id IN {}"
+  updateCode:
+    info: '设置-省市，修改省市代号设置'
+    belongs: 'saveDepartmentCode'
+    verifySql: "SELECT id,`code` FROM qp_itfin2_data_134.cont_num_config_area WHERE id={} AND `code`='{}'"
+  saveBank:
+    info: '设置-合作银行，修改合作银行代号设置'
+    belongs: 'saveBank'
+    verifySql: "SELECT code FROM qp_itfin2_data_232.cont_num_config_bank WHERE bankId=243"
+  saveSpCode:
+    info: '设置-合作车商，修改合作车商代号设置'
+    belongs: 'saveSpCode'
+    verifySql: "SELECT spCode FROM qp_itfin2_data_232.cpt_partner_sp WHERE spId=1"
+  saveProductType:
+    info: '设置-业务类型，修改业务类型代号设置'
+    belongs: 'saveProductType'
+    verifySql: "SELECT `code` FROM qp_itfin2_data_232.cont_num_config_product_type WHERE productType=72"
+  saveProductFrom:
+    info: '设置-业务来源，修改业务来源代号设置'
+    belongs: 'saveProductFrom'
+    verifySql: "SELECT `code` FROM qp_itfin2_data_232.cont_num_config_product_from WHERE productFrom=1"
